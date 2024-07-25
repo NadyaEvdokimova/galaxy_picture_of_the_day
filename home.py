@@ -10,8 +10,11 @@ image = get_image(URL)
 st.set_page_config(layout='wide')
 col1, col2, col3 = st.columns([0.5, 1.5, 0.5])
 
-with col2:
-    st.header("Galaxy Picture of the Day")
-    st.subheader(image["Title"])
-    st.image('image.jpg')
-    st.write(image["Description"])
+try:
+    with col2:
+        st.header("Galaxy Picture of the Day")
+        st.subheader(image["Title"])
+        st.image('image.jpg')
+        st.write(image["Description"])
+except KeyError:
+    st.write("Please try again later, something is wrong.")
