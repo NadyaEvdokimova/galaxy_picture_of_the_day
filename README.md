@@ -1,0 +1,1 @@
+This is simple website that shows the Astronomy Picture of the Day from APOD API.
